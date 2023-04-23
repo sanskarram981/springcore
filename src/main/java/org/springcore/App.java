@@ -1,4 +1,5 @@
 package org.springcore;
+import org.springcore.ci.Person;
 import org.springcore.collections.Emp;
 import org.springframework.context.ApplicationContext;
 import org.springframework.context.support.ClassPathXmlApplicationContext;
@@ -28,6 +29,12 @@ public class App
         System.out.println(a2);
         A a3 = (A)context2.getBean("aref2");
         System.out.println(a3);
+
+        ApplicationContext context3 = new ClassPathXmlApplicationContext("ciconfig.xml");
+        Person p1 = (Person)context3.getBean("person");
+        System.out.println(p1);
+        Person p2 = (Person)context3.getBean("person1");
+        System.out.println(p2);
 
     }
 }
