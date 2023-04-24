@@ -1,4 +1,5 @@
 package org.springcore;
+import org.springcore.ci.Addition;
 import org.springcore.ci.Person;
 import org.springcore.collections.Emp;
 import org.springframework.context.ApplicationContext;
@@ -36,5 +37,13 @@ public class App
         Person p2 = (Person)context3.getBean("person1");
         System.out.println(p2);
 
+        Addition add1 = (Addition)context3.getBean("add1");
+        add1.sum();
+
+        Addition add2 = (Addition)context3.getBean("add2");
+        add2.sum();
+
+        Addition add3 = (Addition)context3.getBean("add3");
+        add3.sum();
     }
 }

@@ -38,4 +38,18 @@
         <constructor-arg ref="certi1"/>
     </bean>
 
+    <bean class="org.springcore.ci.Addition" name="add1">
+        <constructor-arg value="2"/>
+        <constructor-arg value="12"/>
+    </bean>
+
+    <bean class="org.springcore.ci.Addition" name="add2">
+        <constructor-arg value="2" type="int" index="1"/>
+        <constructor-arg value="12" type="int" index="0"/>
+    </bean>
+
+    <bean class="org.springcore.ci.Addition" name="add3">
+        <constructor-arg value="2" type="String" index="0"/>
+        <constructor-arg value="12" type="double" index="1"/>
+    </bean>
 </beans>
