@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xmlns:p="http://www.springframework.org/schema/p"
+       xmlns:util="http://www.springframework.org/schema/util"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+                           http://www.springframework.org/schema/beans/spring-beans.xsd
+                           http://www.springframework.org/schema/context
+                           http://www.springframework.org/schema/context/spring-context.xsd
+                           http://www.springframework.org/schema/util
+                           http://www.springframework.org/schema/util/spring-util.xsd">
+
+    <util:list list-class="java.util.ArrayList" id="krk">
+        <value>123</value>
+        <value>456</value>
+        <value>789</value>
+    </util:list>
+
+    <util:map map-class="java.util.HashMap" id="fee">
+        <entry key="dsa" value="12"/>
+        <entry key="dbms" value="13"/>
+    </util:map>
+
+    <util:properties id="prp">
+        <prop key="username">sans123</prop>
+        <prop key="password">sans@123</prop>
+    </util:properties>
+
+     <bean class="org.springcore.standalonecollection.Person" name="person">
+         <property name="phone" ref="krk"/>
+         <property name="fees" ref="fee"/>
+         <property name="props" ref="prp"/>
+     </bean>
+
+    </beans>

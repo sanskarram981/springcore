@@ -12,5 +12,11 @@
           <property name="street" value="7th cross road"/>
           <property name="city" value="bengaluru"/>
      </bean>
+
+     <bean class="org.springcore.auto.wire.annotation.Address" name="ttaddress">
+          <property name="street" value="8th cross road"/>
+          <property name="city" value="bengaluru"/>
+     </bean>
+
      <bean class="org.springcore.auto.wire.annotation.Emp" name="empl"/>
 </beans>
